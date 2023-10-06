@@ -23,6 +23,9 @@
    After installing the npm inquirer and jest, navigate to the command line and enter node index.js. Answer the required prompts and a svg file will be generated containing a logo.
  
   ## Screenshot
+<img width="1440" alt="Screenshot 2023-10-06 at 10 26 29 AM" src="https://github.com/Abarsanti22/Logo-Maker/assets/138410240/9ca05676-3de0-4612-95a0-082810ed6d73">
+
+![Screenshot 2023-10-06 at 9 42 27 AM](https://github.com/Abarsanti22/Logo-Maker/assets/138410240/88a115fb-6d06-4f2e-8807-2533104c56bd)
 
 
   ## Demo
