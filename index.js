@@ -30,3 +30,44 @@ function writeToFile(fileName, data) {
   });
 }
 
+function promptUser() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message:
+          "Please enter up to three characters for your logo to display",
+        name: "text",
+        validate: (input) => input.length <= 3,
+      },
+      {
+        type: "input",
+        message:
+          "Choose a text color by entering a color keyword or hexadecimal number",
+        name: "textColor",
+
+    },
+      {
+        type: "list",
+        message: "Choose a shape for your logo",
+        choices: ["Circle", "Square", "Triangle"],
+        name: "shape",
+      },
+      {
+        type: "input",
+        message:
+          "Choose a shape color by entering a color keyword or hexadecimal number",
+        name: "shapeBackgroundColor",
+      },
+    ])
+    .then((data) => {
+
+      if (data.text.length > 3) {
+        console.log("Please enter a value of 3 characters or less");
+        promptUser();
+      } else {
+        writeToFile("logo.svg", data);
+      }
+    });
+}
+promptUser();
