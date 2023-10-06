@@ -20,3 +20,13 @@ function writeToFile(fileName, data) {
     shapeChoice = new Triangle();
     svglogo += `<polygon points="150, 20 245, 180 55, 180" fill="${data.shapeBackgroundColor}"/>`;
   }
+
+  svglogo += `<text x="150" y="125" text-anchor="middle" font-size="50" fill="${data.textColor}">${data.text}</text>`;
+  svglogo += "</g>";
+  svglogo += "</svg>";
+
+  fs.writeFile(fileName, svglogo, (err) => {
+    err ? console.log(err) : console.log("Generated logo.svg");
+  });
+}
+
